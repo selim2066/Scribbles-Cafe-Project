@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './component/header/header'
 import Blogs from './component/blog/Blogs'
+import Bookmarks from './component/bookmarks/Bookmarks'
 
 function App() {
   
@@ -11,7 +10,10 @@ function App() {
   return (
     <>
       <Header></Header>
-      <Blogs></Blogs>
+      <main className='m-10 flex justify-between gap-4'>
+        <Blogs></Blogs>
+        <Bookmarks></Bookmarks>
+      </main>
     </>
   )
 }
