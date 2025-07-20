@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
-const Blog = ({ blog, handleBookmarks }) => {
+const Blog = ({ blog, handleBookmarks,handleTime }) => {
+  const {reading_time}=blog
   return (
     <div>
       <div className="py-10">
@@ -41,9 +42,9 @@ const Blog = ({ blog, handleBookmarks }) => {
               </span>
             ))}
           </p>
-          <a href="" className="font-light text-blue-500">
+          <button onClick={()=>handleTime(reading_time)}  className="btn font-light text-blue-500 underline rounded-lg">
             Mark as read
-          </a>
+          </button>
         </div>
       </div>
     </div>
