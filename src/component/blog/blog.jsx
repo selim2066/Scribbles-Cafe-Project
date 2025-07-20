@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmarks }) => {
   return (
     <div>
       <div className="py-10">
@@ -17,11 +17,18 @@ const Blog = ({ blog }) => {
           </div>
           <div className="flex gap-3 items-center">
             <p className="text-black/70">{blog.reading_time} min read</p>
-           <button className=""> <lord-icon
-              src="https://cdn.lordicon.com/qvlwoymy.json"
-              trigger="hover"
-              style={{ width: "25px", height: "25px" }}
-            ></lord-icon></button>
+
+
+            <button onClick={() => handleBookmarks(blog)}>
+              
+              <lord-icon
+                src="https://cdn.lordicon.com/qvlwoymy.json"
+                trigger="hover"
+                style={{ width: "25px", height: "25px" }}
+              ></lord-icon>
+            </button>
+
+
           </div>
         </div>
         {/* heading */}
